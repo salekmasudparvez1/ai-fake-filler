@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Gemini Fake Filler",
+  "version": "1.1",
+  "description": "Auto-fill forms with realistic fake data using Google's Gemini AI.",
+  "permissions": [
+    "scripting",
+    "activeTab",
+    "storage"
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;"
+  },
+  "host_permissions": [
+    "https://generativelanguage.googleapis.com/*",
+    "https://fonts.googleapis.com/*",
+    "<all_urls>"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Fill forms with AI-generated data",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}

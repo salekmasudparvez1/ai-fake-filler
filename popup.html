@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gemini Fake Filler</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      width: 320px;
+      padding: 20px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    .header h3 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    
+    .header p {
+      font-size: 12px;
+      opacity: 0.8;
+    }
+    
+    .form-group {
+      margin-bottom: 15px;
+    }
+    
+    label {
+      display: block;
+      font-size: 12px;
+      font-weight: 500;
+      margin-bottom: 5px;
+      opacity: 0.9;
+    }
+    
+    input {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      background: rgba(255, 255, 255, 0.9);
+      color: #333;
+      transition: all 0.3s ease;
+    }
+    
+    input:focus {
+      outline: none;
+      background: white;
+      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
+    }
+    
+    button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    
+    .btn-primary {
+      background: #4CAF50;
+      color: white;
+    }
+    
+    .btn-primary:hover {
+      background: #45a049;
+      transform: translateY(-1px);
+    }
+    
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: translateY(-1px);
+    }
+    
+    .status {
+      font-size: 12px;
+      text-align: center;
+      margin-top: 10px;
+      opacity: 0.8;
+    }
+    
+    .status.success {
+      color: #4CAF50;
+    }
+    
+    .status.error {
+      color: #f44336;
+    }
+    
+    .material-icons {
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h3>
+      <span class="material-icons">smart_toy</span>
+      Gemini Fake Filler
+    </h3>
+    <p>AI-powered form filling</p>
+  </div>
+  
+  <div class="form-group">
+    <label for="apiKey">Gemini API Key</label>
+    <input id="apiKey" type="password" placeholder="Enter your API key..." />
+  </div>
+  
+  <button id="saveKey" class="btn-secondary">
+    <span class="material-icons">save</span>
+    Save API Key
+  </button>
+  
+  <button id="fillBtn" class="btn-primary">
+    <span class="material-icons">auto_fix_high</span>
+    Fill Form
+  </button>
+  
+  <div id="status" class="status"></div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
