@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# AI Fake Filler Chrome Extension
+# Repository: https://github.com/salekmasudparvez1/ai-fake-filler
+# Live Demo: https://ai-fake-filler.netlify.app
+
+Sitemap: https://salekmasudparvez1.github.io/ai-fake-filler/sitemap.xml
