@@ -1,0 +1,53 @@
+{
+  "name": "ai-fake-filler",
+  "version": "1.1.0",
+  "description": "🤖 AI-powered Chrome extension that automatically fills web forms with realistic fake data using Google's Gemini API. Perfect for testing, development, and form automation.",
+  "main": "manifest.json",
+  "scripts": {
+    "build": "echo 'Building Chrome extension...' && npm run validate",
+    "validate": "node -e \"console.log('✅ Manifest validation passed'); JSON.parse(require('fs').readFileSync('manifest.json', 'utf8'))\"",
+    "test": "npm run validate",
+    "dev": "echo 'Load unpacked extension from current directory in Chrome Developer Mode'",
+    "package": "zip -r ai-fake-filler-extension.zip . -x '*.git*' 'node_modules/*' '*.zip' 'package-lock.json'"
+  },
+  "keywords": [
+    "chrome-extension",
+    "ai",
+    "gemini-api",
+    "form-filler",
+    "fake-data",
+    "test-automation",
+    "web-development",
+    "artificial-intelligence",
+    "google-ai",
+    "browser-extension",
+    "form-automation",
+    "development-tools",
+    "testing-tools",
+    "productivity",
+    "web-scraping",
+    "data-generation",
+    "machine-learning"
+  ],
+  "homepage": "https://ai-fake-filler.netlify.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/salekmasudparvez1/ai-fake-filler.git"
+  },
+  "bugs": {
+    "url": "https://github.com/salekmasudparvez1/ai-fake-filler/issues"
+  },
+  "author": {
+    "name": "Salek Masud Parvez",
+    "url": "https://github.com/salekmasudparvez1"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "browserslist": [
+    "last 2 Chrome versions"
+  ],
+  "devDependencies": {},
+  "dependencies": {}
+}

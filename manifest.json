@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Gemini Fake Filler",
-  "version": "1.1",
-  "description": "Auto-fill forms with realistic fake data using Google's Gemini AI.",
+  "name": "AI Fake Filler - Smart Form Auto-Fill",
+  "version": "1.1.0",
+  "description": "🤖 AI-powered Chrome extension that automatically fills web forms with realistic fake data using Google's Gemini API. Perfect for testing, development, and productivity.",
   "permissions": [
     "scripting",
     "activeTab",
@@ -18,7 +18,7 @@
   ],
   "action": {
     "default_popup": "popup.html",
-    "default_title": "Fill forms with AI-generated data",
+    "default_title": "AI Fake Filler - Auto-fill forms with AI-generated realistic data",
     "default_icon": {
       "16": "icon16.png",
       "48": "icon48.png",
