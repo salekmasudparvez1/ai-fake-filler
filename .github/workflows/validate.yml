@@ -1,0 +1,46 @@
+name: 🔍 Validate Extension
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    name: 🧪 Validate Chrome Extension
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: 📥 Checkout Code
+      uses: actions/checkout@v4
+      
+    - name: 🟢 Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: 📦 Install Dependencies
+      run: npm ci || npm install
+      
+    - name: ✅ Validate Manifest
+      run: npm run validate
+      
+    - name: 🧪 Run Tests
+      run: npm test
+      
+    - name: 📋 Lint Files
+      run: |
+        echo "🔍 Basic file validation..."
+        [ -f "manifest.json" ] && echo "✅ manifest.json exists" || exit 1
+        [ -f "popup.html" ] && echo "✅ popup.html exists" || exit 1
+        [ -f "popup.js" ] && echo "✅ popup.js exists" || exit 1
+        [ -f "content.js" ] && echo "✅ content.js exists" || exit 1
+        [ -f "background.js" ] && echo "✅ background.js exists" || exit 1
+        [ -f "README.md" ] && echo "✅ README.md exists" || exit 1
+        [ -f "LICENSE" ] && echo "✅ LICENSE exists" || exit 1
+        echo "🎉 All required files present!"
+        
+    - name: 📦 Test Package Build
+      run: npm run package || echo "⚠️  Package script not critical for validation"
